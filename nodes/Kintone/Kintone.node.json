@@ -1,0 +1,18 @@
+{
+  "node": "n8n-nodes-kintone",
+  "nodeVersion": "0.1",
+  "codexVersion": "1.0",
+  "categories": ["Data & Storage", "Productivity"],
+  "resources": {
+    "credentialDocumentation": [
+      {
+        "url": "https://github.com/minaz-co-jp/n8n-nodes-kintone#credentials"
+      }
+    ],
+    "primaryDocumentation": [
+      {
+        "url": "https://github.com/minaz-co-jp/n8n-nodes-kintone"
+      }
+    ]
+  }
+}
