@@ -21,9 +21,9 @@ export function parseCredentials(credentials: ICredentialDataDecryptedObject): K
   if (parsed.protocol !== 'https:') {
     throw new Error('Base URLはHTTPSで指定してください。 / Base URL must use HTTPS.');
   }
-  if (/\/k\/(?:guest\/\d+\/)?v1\/?$/i.test(parsed.pathname)) {
+  if (parsed.pathname !== '/' && parsed.pathname !== '') {
     throw new Error(
-      'Base URLにAPIパスを含めないでください。 / Do not include an API path in Base URL.',
+      'Base URLにパスを含めないでください。 / Do not include a path in Base URL.',
     );
   }
 
