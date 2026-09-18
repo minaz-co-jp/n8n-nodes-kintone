@@ -475,10 +475,14 @@ export class Kintone implements INodeType {
                 );
               }
             }
-            response = await client.record.addRecords({
+            const addResult = await client.record.addRecords({
               app,
               records: records as unknown as RecordPayload[],
             });
+            response = {
+              ids: addResult.ids,
+              revisions: addResult.revisions,
+            };
           } else if (operation === 'update') {
             const records = parseJsonArray(
               this.getNodeParameter('recordsJson', itemIndex, '[]'),
